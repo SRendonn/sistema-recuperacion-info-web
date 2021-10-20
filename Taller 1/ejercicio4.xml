@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mc:micasa xmlns:mc='http://www.geneura.org/micasa' xmlns:mueble='http://www.geneura.org/mueble'>
+    <mc:habitacion id="comedor">
+        <mc:mueble>
+            <mueble:nombre>Sofá</mueble:nombre>
+            <mueble:descripcion>Peludo</mueble:descripcion>
+        </mc:mueble>
+    </mc:habitacion>
+</mc:micasa>

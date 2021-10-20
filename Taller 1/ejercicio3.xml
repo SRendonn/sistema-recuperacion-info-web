@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<legos xmlns="https://www.lego.com">
+    <lego id="42083" height="14.76in" width="22.44in" depth="5.91in">
+        <name>LEGO Technic Bugatti Chiron</name>
+        <price currency="USD">349.99</price>
+        <pieces>3599</pieces>
+    </lego>
+    <lego id="42123" height="4.5in" width="12in" depth="4in">
+        <name>LEGO Technic McLaren Senna GTR</name>
+        <price currency="USD">49.99</price>
+        <pieces>830</pieces>
+    </lego>
+    <lego id="42125" height="14.76in" width="22.44in" depth="5.91in">
+        <name>LEGO Technic Ferrari 488 GTE "AF Corse #51"</name>
+        <price currency="USD">169.99</price>
+        <pieces>1677</pieces>
+    </lego>
+</legos>

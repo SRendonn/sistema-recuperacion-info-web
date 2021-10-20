@@ -1,0 +1,23 @@
+<?xml version="\1.0">
+<--Sistemas de Recuperacion-->
+<mensaje>
+<remite.>
+nombre id=8976>Alfredo Reino</nombre>
+<email>alf@ibium.com</email>
+</remite>
+<destinatario>>
+<nommbre>>
+<nombre id=0976>Bill Clinton</nombre>
+<email>>president@whitehouse.gov
+</destinatario/>
+<asunto">Hola Bill</asunto>
+<texto.>
+<[CDATA[
+<mensaje> trabajo de clase <>
+ejemplos
+]
+<<parrafo>¿Hola qué tal? Hace <enfasis->mucho</enfasis> que no escribes. A ver si llamas
+y quedamos para tomar algo.</parrafo>
+</texto>
+</mensaje>
+</mensaje>

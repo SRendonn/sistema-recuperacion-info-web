@@ -1,0 +1,24 @@
+[
+  {
+    "@id": "https://books.org/Hamlet",
+    "https://books.org/isbn": [{ "@value": "1613820917" }],
+    "https://books.org/titulo": [{ "@value": "Hamlet" }],
+    "https://books.org/paginas": [{ "@value": "330" }],
+    "https://books.org/edicion": [{ "@value": "N.D" }],
+    "https://books.org/editorial": [{ "@value": "Simon & Brown" }],
+    "https://books.org/ano_publicacion": [{ "@value": "2015" }],
+    "https://books.org/idioma": [{ "@value": "en" }]
+  },
+  {
+    "@id": "https://books.org/TheLordOfTheRings",
+    "https://books.org/isbn": [{ "@value": "9780618640157" }],
+    "https://books.org/titulo": [
+      { "@value": "The Lord of the Rings: 50th Anniversary One Volume Edition" }
+    ],
+    "https://books.org/paginas": [{ "@value": "1216" }],
+    "https://books.org/edicion": [{ "@value": "N.D" }],
+    "https://books.org/editorial": [{ "@value": "Houghton Mifflin Harcourt" }],
+    "https://books.org/ano_publicacion": [{ "@value": "2005" }],
+    "https://books.org/idioma": [{ "@value": "en" }]
+  }
+]

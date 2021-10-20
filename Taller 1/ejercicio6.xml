@@ -1,0 +1,65 @@
+<?xml-model href="ejercicio5.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<familia>
+  <persona>
+    <nombre>Sebastian</nombre>
+    <apellido>Rendon</apellido>
+    <edad>21</edad>
+    <hijos>
+      <hijo>
+        <nombre>Hasan el gato</nombre>
+      </hijo>
+      <hijo>
+        <nombre>Mi PC</nombre>
+      </hijo>
+    </hijos>
+    <mes-nacimiento>mayo</mes-nacimiento>
+  </persona>
+  <persona>
+    <nombre>Santiago</nombre>
+    <apellido>Rendon</apellido>
+    <edad>21</edad>
+    <hijos>
+      <hijo>
+        <edad>1</edad>
+      </hijo>
+      <hijo>
+        <nombre>El PC de él</nombre>
+      </hijo>
+    </hijos>
+    <mes-nacimiento>mayo</mes-nacimiento>
+  </persona>
+  <persona>
+    <nombre>Gildardo</nombre>
+    <apellido>Rendón</apellido>
+    <edad>59</edad>
+    <hijos>
+      <hijo>
+        <edad>21</edad>
+      </hijo>
+      <hijo>
+        <nombre>Santiago</nombre>
+      </hijo>
+      <hijo>
+        <edad>35</edad>
+      </hijo>
+      <hijo>
+        <nombre>Andrea</nombre>
+      </hijo>
+    </hijos>
+    <mes-nacimiento>julio</mes-nacimiento>
+  </persona>
+  <persona>
+    <nombre>Teresita</nombre>
+    <apellido>Giraldo</apellido>
+    <edad>54</edad>
+    <hijos>
+      <hijo>
+        <nombre>Sebastian</nombre>
+      </hijo>
+      <hijo>
+        <nombre>Santiago</nombre>
+      </hijo>
+    </hijos>
+    <mes-nacimiento>marzo</mes-nacimiento>
+  </persona>
+</familia>

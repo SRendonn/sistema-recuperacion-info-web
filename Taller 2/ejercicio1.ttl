@@ -1,0 +1,19 @@
+@prefix book: <https://books.org/>.
+
+book:Hamlet
+    book:isbn "1613820917";
+    book:titulo "Hamlet";
+    book:paginas "330";
+    book:edicion "N.D";
+    book:editorial "Simon & Brown";
+    book:ano_publicacion "2015";
+    book:idioma "en".
+
+book:TheLordOfTheRings
+    book:isbn "9780618640157";
+    book:titulo "The Lord of the Rings: 50th Anniversary One Volume Edition";
+    book:paginas "1216";
+    book:edicion "N.D";
+    book:editorial "Houghton Mifflin Harcourt";
+    book:ano_publicacion "2005";
+    book:idioma "en".

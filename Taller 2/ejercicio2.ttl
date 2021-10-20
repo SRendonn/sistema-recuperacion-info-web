@@ -1,0 +1,20 @@
+@prefix book: <https://books.org/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+book:Hamlet
+    book:isbn "1613820917"^^xsd:string;
+    book:titulo "Hamlet"^^xsd:string;
+    book:paginas "330"^^xsd:string;
+    book:edicion "N.D"^^xsd:string;
+    book:editorial "Simon & Brown"^^xsd:string;
+    book:ano_publicacion "2015"^^xsd:gYear;
+    book:idioma "en"^^xsd:language.
+
+book:TheLordOfTheRings
+    book:isbn "9780618640157";
+    book:titulo "The Lord of the Rings: 50th Anniversary One Volume Edition";
+    book:paginas "1216"^^xsd:string;
+    book:edicion "N.D";
+    book:editorial "Houghton Mifflin Harcourt";
+    book:ano_publicacion "2005";
+    book:idioma "en"^^xsd:language.

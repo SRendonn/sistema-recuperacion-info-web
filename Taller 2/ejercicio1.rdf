@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:book="https://books.org/">
+
+  <rdf:Description rdf:about="https://books.org/Hamlet">
+    <book:isbn>1613820917</book:isbn>
+    <book:titulo>Hamlet</book:titulo>
+    <book:paginas>330</book:paginas>
+    <book:edicion>N.D</book:edicion>
+    <book:editorial>Simon &amp; Brown</book:editorial>
+    <book:ano_publicacion>2015</book:ano_publicacion>
+    <book:idioma>en</book:idioma>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://books.org/TheLordOfTheRings">
+    <book:isbn>9780618640157</book:isbn>
+    <book:titulo>The Lord of the Rings: 50th Anniversary One Volume Edition</book:titulo>
+    <book:paginas>1216</book:paginas>
+    <book:edicion>N.D</book:edicion>
+    <book:editorial>Houghton Mifflin Harcourt</book:editorial>
+    <book:ano_publicacion>2005</book:ano_publicacion>
+    <book:idioma>en</book:idioma>
+  </rdf:Description>
+
+</rdf:RDF>

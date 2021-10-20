@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- Version "\1.0" es inválida, debe ser "1.0". Falta "?" final -->
+<!--Sistemas de Recuperacion-->
+<!-- Falta el "!" al inicio para que sea un comentario -->
+<mensaje>
+    <remite>
+        <!-- tags no coinciden, renombrarla -->
+        <nombre id="8976">Alfredo Reino</nombre> <!-- Falta tag nombre inicial, atributo id debe estar entre comillas -->
+        <email>alf@ibium.com</email>
+    </remite>
+    <destinatario>
+        <!-- &gt; innecesario, removerlo -->
+        <!-- &gt; innecesario, removerlo, tag sin cierre, removerlo o cerrarlo -->
+        <nombre id="0976">Bill Clinton</nombre> <!-- Atributo id debe estar entre comillas -->
+        <email>president@whitehouse.gov</email> <!-- &gt; innecesario, removerlo, tag sin cierre, cerrarlo -->
+    </destinatario> <!-- tag de cierre con un backslash innecesario, removerlo -->
+    <asunto>Hola Bill</asunto> <!-- Comilla innecesaria, typo, removerla -->
+    <texto>
+        <!-- tags no coinciden, renombrarla -->
+        <![CDATA[
+<mensaje> trabajo de clase <>
+ejemplos
+]]>
+        <!-- CDATA mal abierto, falta "!" inicial. CDATA mal cerrado, cambiar "]" por "]]>" -->
+        <parrafo>
+            ¿Hola qué tal? Hace
+            <enfasis>mucho</enfasis>
+            que no escribes. A ver si llamas <!-- &lt; innecesario al inicio del tag parrafo, eliminarlo. Tag enfasis no coincide, renombrarlo -->
+            y quedamos para tomar algo.
+        </parrafo>
+    </texto>
+</mensaje><!-- tag mensaje de cierre innecesario, ya se cerró arriba, eliminarlo -->

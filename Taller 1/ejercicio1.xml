@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- El prólogo XML, define la versión y el encoding -->
+<!--SISTEMAS DE RECUPERACION WEB--> <!-- Se realizan comentarios con "<!\-\- ## CONTENIDO ## \-\->" -->
+<libros xmlns="https://books.org"> <!-- Este es el root del documento. El atributo xmlns define un namespace, un prefijo para los hijos de este elemento -->
+    <libro ISBN="1613820917"> <!-- Se pueden definir atributos para un elemento, en este caso el ISBN, deben ir entre comillas dobles o simples -->
+        <titulo>Hamlet</titulo>
+        <autor>W. Shakespeare</autor>
+        <paginas>330</paginas>
+        <editorial>Simon &amp; Brown</editorial> <!-- Las entidades XML que sirven para denotar caracteres especiales o no nativos a XML: &amp; &lt; &gt; &quot; &nbsp; -->
+    </libro>
+    <libro ISBN="9789584254726">
+        <titulo>La sombra del viento</titulo>
+        <autor>Carlos Ruiz Safron</autor>
+        <paginas>575</paginas>
+        <editorial>Planeta Booket</editorial>
+    </libro>
+    <libro ISBN="0765367297">
+        <titulo>&lt; Halo &gt; The Fall of Reach</titulo><!-- Entidades especiales &lt; &gt; -->
+        <autor>Eric Nylund</autor>
+        <paginas>448</paginas>
+        <editorial>Tor Books</editorial>
+    </libro>
+</libros>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:book="https://books.org/">
+
+  <rdf:Description rdf:about="https://books.org/Hamlet">
+    <book:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1613820917</book:isbn>
+    <book:titulo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hamlet</book:titulo>
+    <book:paginas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">330</book:paginas>
+    <book:edicion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N.D</book:edicion>
+    <book:editorial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simon &amp; Brown</book:editorial>
+    <book:ano_publicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2015</book:ano_publicacion>
+    <book:idioma rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</book:idioma>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://books.org/TheLordOfTheRings">
+    <book:isbn>9780618640157</book:isbn>
+    <book:titulo>The Lord of the Rings: 50th Anniversary One Volume Edition</book:titulo>
+    <book:paginas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1216</book:paginas>
+    <book:edicion>N.D</book:edicion>
+    <book:editorial>Houghton Mifflin Harcourt</book:editorial>
+    <book:ano_publicacion>2005</book:ano_publicacion>
+    <book:idioma rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</book:idioma>
+  </rdf:Description>
+
+</rdf:RDF>
