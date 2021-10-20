@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:st="http://actores.org/">
+
+  <rdfs:Class rdf:about="http://actores.org/Persona">
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://actores.org/Actor">
+    <rdfs:subClassOf rdf:resource="http://actores.org/Persona"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://actores.org/Personaje">
+    <rdfs:subClassOf rdf:resource="http://actores.org/Actor"/>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://actores.org/Pelicula">
+  </rdfs:Class>
+
+  <rdfs:Property rdf:about="http://actores.org/Personajes">
+    <rdfs:subPropertyOf rdf:resource="http://actores.org/Ano"/>
+    <rdfs:range rdf:resource="http://actores.org/Personaje"/>
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://actores.org/Interpretado">
+    <rdfs:domain rdf:resource="http://actores.org/Personaje"/>
+    <rdfs:range rdf:resource="http://actores.org/Actor"/>
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://actores.org/Ano">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://actores.org/Ano_nacimiento">
+    <rdfs:subPropertyOf rdf:resource="http://actores.org/Ano"/>
+    <rdfs:domain rdf:resource="http://actores.org/Persona"/>
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://actores.org/Nombre">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://actores.org/Persona"/>
+    <rdfs:domain rdf:resource="http://actores.org/Pelicula"/>
+  </rdfs:Property>
+
+  <rdfs:Property rdf:about="http://actores.org/Amigo">
+    <rdfs:domain rdf:resource="http://actores.org/Persona"/>
+    <rdfs:range rdf:resource="http://actores.org/Persona"/>
+  </rdfs:Property>
+
+  <rdf:Description rdf:about="http://actores.org/Sebas">
+    <rdf:type rdf:resource="http://actores.org/Persona"/>
+    <st:Nombre>Sebastian</st:Nombre>
+    <st:Ano_nacimiento>2000</st:Ano_nacimiento>
+  </rdf:Description>
+
+  <st:Actor rdf:about="http://actores.org/Santiago">
+    <st:Nombre>Santiago</st:Nombre>
+    <st:Ano_nacimiento>2000</st:Ano_nacimiento>
+    <st:Amigo rdf:resource="http://actores.org/Sebas"/>
+  </st:Actor>
+
+  <st:Pelicula rdf:about="http://actores.org/Juego_de_Gemelas">
+    <st:Nombre>Juego de Gemelas</st:Nombre>
+    <st:Personajes rdf:resource="http://actores.org/Santiago"/>
+  </st:Pelicula>
+
+</rdf:RDF>

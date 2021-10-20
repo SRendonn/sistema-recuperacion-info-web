@@ -34,4 +34,8 @@ event:Year_End_Event
             rdf:_6 "Viernes";
             rdf:_7 "Sabado";
         ]
+    ];
+    event:empleados [
+        event:meseros ("Carlos" "Ciro");
+        event:ayudantes ("Santiago" "Alejandro");
     ].

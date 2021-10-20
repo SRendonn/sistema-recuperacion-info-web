@@ -1,0 +1,37 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix st: <http://actores.org/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+st:Persona rdf:type rdfs:Class.
+
+st:Actor a rdfs:Class;
+    rdfs:subClassOf st:Persona.
+
+st:Personaje a rdfs:Class;
+    rdfs:subClassOf st:Actor.
+
+st:Pelicula a rdfs:Class.
+
+st:Personajes a rdfs:Property;
+    rdfs:subPropertyOf st:Ano;
+    rdfs:range st:Personaje.
+
+st:Interpretado a rdfs:Property;
+    rdfs:domain st:Personaje;
+    rdfs:range st:Actor.
+
+st:Ano a rdfs:Property;
+    rdfs:range xsd:integer.
+
+st:Ano_nacimiento a rdfs:Property;
+    rdfs:subPropertyOf st:Ano;
+    rdfs:domain st:Persona.
+
+st:Nombre a rdfs:Property;
+    rdfs:range xsd:string;
+    rdfs:domain st:Persona;
+    rdfs:domain st:Pelicula.
+
+st:Amigo a rdfs:Property;
+    rdfs:domain st:Persona;
+    rdfs:range st:Persona.
