@@ -1,0 +1,365 @@
+@prefix : <http://www.semanticweb.org/seren/ontologies/2021/10/untitled-ontology-4#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.sriw.org/taller-3/pizzas> .
+
+<http://www.sriw.org/taller-3/pizzas> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.sriw.org/taller-3/pizzas#has_Base
+:has_Base rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :has_Ingredient ;
+          owl:inverseOf :is_Base_Of ;
+          rdf:type owl:FunctionalProperty ;
+          rdfs:domain :Pizza ;
+          rdfs:range :Pizza_Base .
+
+
+###  http://www.sriw.org/taller-3/pizzas#has_Ingredient
+:has_Ingredient rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                owl:inverseOf :is_Ingredient_Of .
+
+
+###  http://www.sriw.org/taller-3/pizzas#has_Topping
+:has_Topping rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :has_Ingredient ;
+             owl:inverseOf :is_Topping_Of ;
+             rdfs:domain :Pizza ;
+             rdfs:range :Pizza_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#is_Base_Of
+:is_Base_Of rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :is_Ingredient_Of .
+
+
+###  http://www.sriw.org/taller-3/pizzas#is_Ingredient_Of
+:is_Ingredient_Of rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdf:type owl:TransitiveProperty .
+
+
+###  http://www.sriw.org/taller-3/pizzas#is_Topping_Of
+:is_Topping_Of rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :is_Ingredient_Of .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.sriw.org/taller-3/pizzas#American_Hot_Pizza
+:American_Hot_Pizza rdf:type owl:Class ;
+                    rdfs:subClassOf :Named_Pizza ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :has_Topping ;
+                                      owl:someValuesFrom :Jalapeno_Pepper_Topping
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :has_Topping ;
+                                      owl:someValuesFrom :Mozzarella_Topping
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :has_Topping ;
+                                      owl:someValuesFrom :Pepperoni_Topping
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :has_Topping ;
+                                      owl:someValuesFrom :Tomato_Topping
+                                    ] .
+
+
+###  http://www.sriw.org/taller-3/pizzas#American_Pizza
+:American_Pizza rdf:type owl:Class ;
+                rdfs:subClassOf :Named_Pizza ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :has_Topping ;
+                                  owl:someValuesFrom :Mozzarella_Topping
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :has_Topping ;
+                                  owl:someValuesFrom :Pepperoni_Topping
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :has_Topping ;
+                                  owl:someValuesFrom :Tomato_Topping
+                                ] .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Anchovy_Topping
+:Anchovy_Topping rdf:type owl:Class ;
+                 rdfs:subClassOf :Seafood_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Caper_Topping
+:Caper_Topping rdf:type owl:Class ;
+               rdfs:subClassOf :Vegetable_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Cheese_Topping
+:Cheese_Topping rdf:type owl:Class ;
+                rdfs:subClassOf :Pizza_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Cheesy_Pizza
+:Cheesy_Pizza rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( :Pizza
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :has_Topping ;
+                                                           owl:someValuesFrom :Cheese_Topping
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Deep_Pan_Base
+:Deep_Pan_Base rdf:type owl:Class ;
+               rdfs:subClassOf :Pizza_Base ;
+               owl:disjointWith :Thin_And_Crispy_Base .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Green_Pepper_Topping
+:Green_Pepper_Topping rdf:type owl:Class ;
+                      rdfs:subClassOf :Pepper_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Ham_Topping
+:Ham_Topping rdf:type owl:Class ;
+             rdfs:subClassOf :Meat_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Jalapeno_Pepper_Topping
+:Jalapeno_Pepper_Topping rdf:type owl:Class ;
+                         rdfs:subClassOf :Pepper_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Margherita_Pizza
+:Margherita_Pizza rdf:type owl:Class ;
+                  rdfs:subClassOf :Named_Pizza ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has_Topping ;
+                                    owl:someValuesFrom :Mozzarella_Topping
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has_Topping ;
+                                    owl:someValuesFrom :Tomato_Topping
+                                  ] .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Meat_Topping
+:Meat_Topping rdf:type owl:Class ;
+              rdfs:subClassOf :Pizza_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Mozzarella_Topping
+:Mozzarella_Topping rdf:type owl:Class ;
+                    rdfs:subClassOf :Cheese_Topping ;
+                    owl:disjointWith :Parmezan_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Mushroom_Topping
+:Mushroom_Topping rdf:type owl:Class ;
+                  rdfs:subClassOf :Vegetable_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Named_Pizza
+:Named_Pizza rdf:type owl:Class ;
+             rdfs:subClassOf :Pizza .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Olive_Topping
+:Olive_Topping rdf:type owl:Class ;
+               rdfs:subClassOf :Vegetable_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Onion_Topping
+:Onion_Topping rdf:type owl:Class ;
+               rdfs:subClassOf :Vegetable_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Parmezan_Topping
+:Parmezan_Topping rdf:type owl:Class ;
+                  rdfs:subClassOf :Cheese_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Pepper_Topping
+:Pepper_Topping rdf:type owl:Class ;
+                rdfs:subClassOf :Vegetable_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Pepperoni_Topping
+:Pepperoni_Topping rdf:type owl:Class ;
+                   rdfs:subClassOf :Meat_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Pizza
+:Pizza rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :has_Base ;
+                         owl:someValuesFrom :Pizza_Base
+                       ] .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Pizza_Base
+:Pizza_Base rdf:type owl:Class .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Pizza_Topping
+:Pizza_Topping rdf:type owl:Class .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Prawn_Topping
+:Prawn_Topping rdf:type owl:Class ;
+               rdfs:subClassOf :Seafood_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Probe_Inconsistent_Topping
+:Probe_Inconsistent_Topping rdf:type owl:Class ;
+                            rdfs:subClassOf :Cheese_Topping ,
+                                            :Vegetable_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Red_Pepper_Topping
+:Red_Pepper_Topping rdf:type owl:Class ;
+                    rdfs:subClassOf :Pepper_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Salami_Topping
+:Salami_Topping rdf:type owl:Class ;
+                rdfs:subClassOf :Meat_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Seafood_Topping
+:Seafood_Topping rdf:type owl:Class ;
+                 rdfs:subClassOf :Pizza_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Soho_Pizza
+:Soho_Pizza rdf:type owl:Class ;
+            rdfs:subClassOf :Named_Pizza ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :has_Topping ;
+                              owl:someValuesFrom :Mozzarella_Topping
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :has_Topping ;
+                              owl:someValuesFrom :Olive_Topping
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :has_Topping ;
+                              owl:someValuesFrom :Parmezan_Topping
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :has_Topping ;
+                              owl:someValuesFrom :Tomato_Topping
+                            ] .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Spicy_Beef_Topping
+:Spicy_Beef_Topping rdf:type owl:Class ;
+                    rdfs:subClassOf :Meat_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Thin_And_Crispy_Base
+:Thin_And_Crispy_Base rdf:type owl:Class ;
+                      rdfs:subClassOf :Pizza_Base .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Tomato_Topping
+:Tomato_Topping rdf:type owl:Class ;
+                rdfs:subClassOf :Vegetable_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Tuna_Topping
+:Tuna_Topping rdf:type owl:Class ;
+              rdfs:subClassOf :Seafood_Topping .
+
+
+###  http://www.sriw.org/taller-3/pizzas#Vegetable_Topping
+:Vegetable_Topping rdf:type owl:Class ;
+                   rdfs:subClassOf :Pizza_Topping .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :American_Hot_Pizza
+                :American_Pizza
+                :Margherita_Pizza
+                :Soho_Pizza
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Anchovy_Topping
+                :Prawn_Topping
+                :Tuna_Topping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Caper_Topping
+                :Mushroom_Topping
+                :Olive_Topping
+                :Onion_Topping
+                :Pepper_Topping
+                :Tomato_Topping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Cheese_Topping
+                :Meat_Topping
+                :Seafood_Topping
+                :Vegetable_Topping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Green_Pepper_Topping
+                :Jalapeno_Pepper_Topping
+                :Red_Pepper_Topping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Ham_Topping
+                :Pepperoni_Topping
+                :Salami_Topping
+                :Spicy_Beef_Topping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Mozzarella_Topping
+                :Parmezan_Topping
+                :Probe_Inconsistent_Topping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Pizza
+                :Pizza_Base
+                :Pizza_Topping
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
