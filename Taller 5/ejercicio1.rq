@@ -1,0 +1,8 @@
+PREFIX ap: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?ciudad
+{
+    ?farola a ap:PuntoDeAlumbrado.
+    ?farola dbo:city ?ciudad.
+}

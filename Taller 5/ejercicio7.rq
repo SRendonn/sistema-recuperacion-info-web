@@ -1,0 +1,14 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?nombre ?country
+{
+  ?company dbo:type dbr:Public_company.
+  ?company rdfs:label ?nombre.
+  ?company dbo:product ?product.
+  ?company dbp:locationCountry ?country
+  FILTER(?product = dbr:Motorcycle || ?product = dbr:All-terrain_vehicle)
+  FILTER(STR(?country) = "Japan")
+}

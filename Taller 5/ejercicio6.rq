@@ -1,0 +1,13 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/property/>
+
+SELECT DISTINCT ?name ?os ?lang
+{
+    ?resource a dbo:Software.
+    ?resource rdfs:label ?name.
+    ?resource dbp:programmingLanguage ?lang.
+    ?resource dbp:operatingSystem ?os.
+    FILTER(?lang = dbr:Java_\(programming_language\))
+    FILTER(?os = dbr:MacOS || ?os = dbr:Linux)
+}

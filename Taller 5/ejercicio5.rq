@@ -1,0 +1,13 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?nombre ?categoria
+{
+    ?persona a dbo:Person.
+    ?persona rdfs:label ?nombre.
+    ?persona dbo:award ?premio.
+    ?premio dct:subject dbc:Nobel_Prize.
+    ?premio rdfs:label ?categoria.
+}
+ORDER BY ASC(?nombre)
+LIMIT 100

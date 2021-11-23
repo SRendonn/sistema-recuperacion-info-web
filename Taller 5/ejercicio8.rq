@@ -1,0 +1,13 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?name ?genre
+{
+  ?game a dbo:Software.
+  ?game dbp:publisher dbr:Ubisoft.
+  ?game dbp:platforms dbr:Microsoft_Windows.
+  ?game rdfs:label ?name.
+  ?game dbp:genre ?genre.
+}

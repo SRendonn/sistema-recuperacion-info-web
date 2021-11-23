@@ -1,0 +1,7 @@
+PREFIX ap: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+
+SELECT DISTINCT ?property
+{
+    ?farola a ap:PuntoDeAlumbrado.
+    ?farola ?property ?value.
+}

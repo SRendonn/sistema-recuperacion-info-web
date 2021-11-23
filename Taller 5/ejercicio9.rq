@@ -1,0 +1,11 @@
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/property/>
+
+SELECT ?band
+{
+  ?band a dbo:Band.
+  ?band dbo:genre dbr:Alternative_rock.
+  ?band dbp:origin ?origin.
+  FILTER regex(STR(?origin), "U.S.")
+}

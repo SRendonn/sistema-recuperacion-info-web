@@ -1,0 +1,11 @@
+PREFIX ap: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/alumbrado-publico#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX skosaltura: <http://vocab.linkeddata.es/datosabiertos/kos/urbanismo-infraestructuras/alumbrado-publico/altura/>
+
+SELECT DISTINCT ?farola ?latitud ?longitud
+{
+    ?farola a ap:PuntoDeAlumbrado.
+    ?farola geo:lat ?latitud.
+    ?farola geo:long ?longitud.
+    ?farola ap:altura skosaltura:Alta.
+}
