@@ -1,0 +1,21 @@
+# Nombre, año y categoría de ganadores del nóbel de física y química
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX nobel: <http://data.nobelprize.org/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?name ?nobelCat ?year WHERE {
+ ?p nobel:nobelPrize ?nobel.
+ ?p foaf:name ?name.
+ ?nobel nobel:year ?year.
+ ?nobel nobel:category ?nobelCat.
+ {
+    ?nobel nobel:category nobel:Chemistry.
+ }
+ UNION
+ {
+ 	?nobel nobel:category nobel:Physics.   
+ }
+}

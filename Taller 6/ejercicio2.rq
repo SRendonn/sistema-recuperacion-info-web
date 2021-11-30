@@ -1,0 +1,14 @@
+# Nombres y descripción de futbolistas nacidos en Medellín
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+
+SELECT DISTINCT ?person ?personLabel ?personDescription
+WHERE
+{
+?person wdt:P31 wd:Q5 .
+?person wdt:P19 wd:Q48278.
+?person wdt:P106 wd:Q937857.
+SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" }
+}

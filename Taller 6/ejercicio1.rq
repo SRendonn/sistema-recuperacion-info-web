@@ -1,0 +1,13 @@
+# Razas de perros
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+
+SELECT DISTINCT ?breedLabel ?breed
+WHERE 
+{
+  ?dog wdt:P31 wd:Q144.
+  ?dog wdt:P4743 ?breed
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" }
+}

@@ -1,0 +1,28 @@
+# Ganadores del nóbel el mismo año que Gabriel García Márquez
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX nobel: <http://data.nobelprize.org/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?name ?placeName WHERE {
+  ?p nobel:nobelPrize ?nobel.
+  ?p foaf:name ?name.
+  ?nobel nobel:year ?year.
+  ?p dbo:birthPlace ?place.
+  ?place a dbo:Country.
+  ?place rdfs:label ?placeName.
+  FILTER REGEX(?name, "^((?!Gabriel García Márquez).)*$")
+  FILTER(LANG(?placeName) = 'en')
+  {
+    SELECT DISTINCT ?year WHERE {
+      ?s rdfs:label ?na.
+      ?s nobel:nobelPrize ?prize.
+      ?prize nobel:year ?year
+      FILTER(REGEX(?na, "Gabriel García Márquez"))
+    }
+  }
+}

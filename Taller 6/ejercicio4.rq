@@ -1,0 +1,13 @@
+# Lunas de saturno
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+
+SELECT  ?moonLabel
+WHERE
+{ 
+wd:Q193 wdt:P398 ?moon.
+?moon wdt:P31 wd:Q1972
+SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". } 
+} 

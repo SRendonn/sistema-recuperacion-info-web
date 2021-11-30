@@ -1,0 +1,15 @@
+# Nombre y premio de ganadores múltiples del nóbel
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX nobel: <http://data.nobelprize.org/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?name (COUNT(DISTINCT ?prize) as ?numPrizes) WHERE {
+?p a nobel:Laureate.
+?p foaf:name ?name.
+?p nobel:nobelPrize ?prize
+} GROUP BY (?name) HAVING (?numPrizes > 1)

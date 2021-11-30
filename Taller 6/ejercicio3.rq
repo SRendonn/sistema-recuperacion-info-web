@@ -1,0 +1,15 @@
+# Cantidad de exoplanetas descubiertos por una persona o instituto
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+
+SELECT (COUNT (?exoPlanet) AS ?numExoPlanet) ?personLabel
+WHERE
+{
+?exoPlanet wdt:P31 wd:Q44559. 
+?exoPlanet wdt:P61 ?person.
+           
+SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  
+} GROUP BY (?personLabel)
