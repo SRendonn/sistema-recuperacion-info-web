@@ -1,0 +1,8 @@
+PREFIX robot: <http://all-robotics.com#>
+
+SELECT DISTINCT ?nombre 
+WHERE {
+ ?robot robot:Nombre ?nombre.
+ ?robot robot:Identificacion ?x.
+ ?robot robot:Peso ?y.
+}

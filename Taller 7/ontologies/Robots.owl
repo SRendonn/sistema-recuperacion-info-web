@@ -1,0 +1,486 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://all-robotics.com#"
+     xml:base="http://all-robotics.com"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://all-robotics.com"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://all-robotics.com#Creado_Por -->
+
+    <owl:ObjectProperty rdf:about="http://all-robotics.com#Creado_Por">
+        <owl:inverseOf rdf:resource="http://all-robotics.com#Creador_De"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://all-robotics.com#Robots"/>
+        <rdfs:range rdf:resource="http://all-robotics.com#Empresa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://all-robotics.com#Creador_De -->
+
+    <owl:ObjectProperty rdf:about="http://all-robotics.com#Creador_De">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://all-robotics.com#Empresa"/>
+        <rdfs:range rdf:resource="http://all-robotics.com#Robots"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://all-robotics.com#Distribuido_Por -->
+
+    <owl:ObjectProperty rdf:about="http://all-robotics.com#Distribuido_Por">
+        <owl:inverseOf rdf:resource="http://all-robotics.com#Distribuidora_De"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://all-robotics.com#Robots"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://all-robotics.com#Distribuidora"/>
+                    <rdf:Description rdf:about="http://all-robotics.com#Transportadora"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://all-robotics.com#Distribuidora_De -->
+
+    <owl:ObjectProperty rdf:about="http://all-robotics.com#Distribuidora_De">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://all-robotics.com#Distribuidora"/>
+                    <rdf:Description rdf:about="http://all-robotics.com#Transportadora"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://all-robotics.com#Robots"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://all-robotics.com#Ensamblado_Por -->
+
+    <owl:ObjectProperty rdf:about="http://all-robotics.com#Ensamblado_Por">
+        <owl:inverseOf rdf:resource="http://all-robotics.com#Ensambladora_De"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://all-robotics.com#Robots"/>
+        <rdfs:range rdf:resource="http://all-robotics.com#Ensambladora"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://all-robotics.com#Ensambladora_De -->
+
+    <owl:ObjectProperty rdf:about="http://all-robotics.com#Ensambladora_De">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://all-robotics.com#Ensambladora"/>
+        <rdfs:range rdf:resource="http://all-robotics.com#Robots"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://all-robotics.com#Direccion -->
+
+    <owl:DatatypeProperty rdf:about="http://all-robotics.com#Direccion">
+        <rdfs:domain rdf:resource="http://all-robotics.com#Empresa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://all-robotics.com#Identificacion -->
+
+    <owl:DatatypeProperty rdf:about="http://all-robotics.com#Identificacion">
+        <rdfs:domain rdf:resource="http://all-robotics.com#Robots"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://all-robotics.com#Nit -->
+
+    <owl:DatatypeProperty rdf:about="http://all-robotics.com#Nit">
+        <rdfs:domain rdf:resource="http://all-robotics.com#Empresa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://all-robotics.com#Nombre -->
+
+    <owl:DatatypeProperty rdf:about="http://all-robotics.com#Nombre">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://all-robotics.com#Empresa"/>
+                    <rdf:Description rdf:about="http://all-robotics.com#Robots"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://all-robotics.com#Peso -->
+
+    <owl:DatatypeProperty rdf:about="http://all-robotics.com#Peso">
+        <rdfs:domain rdf:resource="http://all-robotics.com#Robots"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://all-robotics.com#Telefono -->
+
+    <owl:DatatypeProperty rdf:about="http://all-robotics.com#Telefono">
+        <rdfs:domain rdf:resource="http://all-robotics.com#Empresa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://all-robotics.com#Androide -->
+
+    <owl:Class rdf:about="http://all-robotics.com#Androide">
+        <rdfs:subClassOf rdf:resource="http://all-robotics.com#Robots"/>
+    </owl:Class>
+    
+
+
+    <!-- http://all-robotics.com#Bipedo -->
+
+    <owl:Class rdf:about="http://all-robotics.com#Bipedo">
+        <rdfs:subClassOf rdf:resource="http://all-robotics.com#Robots"/>
+    </owl:Class>
+    
+
+
+    <!-- http://all-robotics.com#Disenadora -->
+
+    <owl:Class rdf:about="http://all-robotics.com#Disenadora">
+        <rdfs:subClassOf rdf:resource="http://all-robotics.com#Empresa"/>
+        <owl:disjointWith rdf:resource="http://all-robotics.com#Distribuidora"/>
+        <owl:disjointWith rdf:resource="http://all-robotics.com#Ensambladora"/>
+        <owl:disjointWith rdf:resource="http://all-robotics.com#Transportadora"/>
+    </owl:Class>
+    
+
+
+    <!-- http://all-robotics.com#Distribuidora -->
+
+    <owl:Class rdf:about="http://all-robotics.com#Distribuidora">
+        <owl:equivalentClass rdf:resource="http://all-robotics.com#Transportadora"/>
+        <rdfs:subClassOf rdf:resource="http://all-robotics.com#Empresa"/>
+        <owl:disjointWith rdf:resource="http://all-robotics.com#Ensambladora"/>
+    </owl:Class>
+    
+
+
+    <!-- http://all-robotics.com#Empresa -->
+
+    <owl:Class rdf:about="http://all-robotics.com#Empresa">
+        <owl:disjointWith rdf:resource="http://all-robotics.com#Robots"/>
+    </owl:Class>
+    
+
+
+    <!-- http://all-robotics.com#Ensambladora -->
+
+    <owl:Class rdf:about="http://all-robotics.com#Ensambladora">
+        <rdfs:subClassOf rdf:resource="http://all-robotics.com#Empresa"/>
+        <owl:disjointWith rdf:resource="http://all-robotics.com#Transportadora"/>
+    </owl:Class>
+    
+
+
+    <!-- http://all-robotics.com#Hibrido -->
+
+    <owl:Class rdf:about="http://all-robotics.com#Hibrido">
+        <rdfs:subClassOf rdf:resource="http://all-robotics.com#Robots"/>
+    </owl:Class>
+    
+
+
+    <!-- http://all-robotics.com#Industrial -->
+
+    <owl:Class rdf:about="http://all-robotics.com#Industrial">
+        <rdfs:subClassOf rdf:resource="http://all-robotics.com#Robots"/>
+    </owl:Class>
+    
+
+
+    <!-- http://all-robotics.com#Movil -->
+
+    <owl:Class rdf:about="http://all-robotics.com#Movil">
+        <rdfs:subClassOf rdf:resource="http://all-robotics.com#Robots"/>
+    </owl:Class>
+    
+
+
+    <!-- http://all-robotics.com#Rescate -->
+
+    <owl:Class rdf:about="http://all-robotics.com#Rescate">
+        <rdfs:subClassOf rdf:resource="http://all-robotics.com#Robots"/>
+    </owl:Class>
+    
+
+
+    <!-- http://all-robotics.com#Robots -->
+
+    <owl:Class rdf:about="http://all-robotics.com#Robots"/>
+    
+
+
+    <!-- http://all-robotics.com#Transportadora -->
+
+    <owl:Class rdf:about="http://all-robotics.com#Transportadora">
+        <rdfs:subClassOf rdf:resource="http://all-robotics.com#Empresa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://all-robotics.com#Zoomorfico -->
+
+    <owl:Class rdf:about="http://all-robotics.com#Zoomorfico">
+        <rdfs:subClassOf rdf:resource="http://all-robotics.com#Robots"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://all-robotics.com#Empresa1 -->
+
+    <owl:NamedIndividual rdf:about="http://all-robotics.com#Empresa1">
+        <rdf:type rdf:resource="http://all-robotics.com#Disenadora"/>
+        <Direccion>Calle 80</Direccion>
+        <Nit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1234</Nit>
+        <Nombre>Diseños Roboticos</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">532</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://all-robotics.com#Empresa2 -->
+
+    <owl:NamedIndividual rdf:about="http://all-robotics.com#Empresa2">
+        <rdf:type rdf:resource="http://all-robotics.com#Distribuidora"/>
+        <Distribuidora_De rdf:resource="http://all-robotics.com#Robot3"/>
+        <Distribuidora_De rdf:resource="http://all-robotics.com#Robot4"/>
+        <Direccion>Carrera 4</Direccion>
+        <Nit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1568</Nit>
+        <Nombre>DistriRobots</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://all-robotics.com#Empresa3 -->
+
+    <owl:NamedIndividual rdf:about="http://all-robotics.com#Empresa3">
+        <rdf:type rdf:resource="http://all-robotics.com#Ensambladora"/>
+        <Creador_De rdf:resource="http://all-robotics.com#Robot6"/>
+        <Ensambladora_De rdf:resource="http://all-robotics.com#Robot5"/>
+        <Nombre>EnsamblaBots</Nombre>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31256</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://all-robotics.com#Empresa4 -->
+
+    <owl:NamedIndividual rdf:about="http://all-robotics.com#Empresa4">
+        <rdf:type rdf:resource="http://all-robotics.com#Transportadora"/>
+        <Creador_De rdf:resource="http://all-robotics.com#Robot1"/>
+        <Distribuidora_De rdf:resource="http://all-robotics.com#Robot1"/>
+        <Direccion>Avenida Siempre Viva</Direccion>
+        <Nit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">687543</Nit>
+        <Telefono rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36745</Telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://all-robotics.com#Empresa5 -->
+
+    <owl:NamedIndividual rdf:about="http://all-robotics.com#Empresa5">
+        <rdf:type rdf:resource="http://all-robotics.com#Ensambladora"/>
+        <Ensambladora_De rdf:resource="http://all-robotics.com#Robot1"/>
+        <Ensambladora_De rdf:resource="http://all-robotics.com#Robot6"/>
+        <Nit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3687697</Nit>
+        <Nombre>Ensambles LTDA</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://all-robotics.com#Robot1 -->
+
+    <owl:NamedIndividual rdf:about="http://all-robotics.com#Robot1">
+        <rdf:type rdf:resource="http://all-robotics.com#Androide"/>
+        <Creado_Por rdf:resource="http://all-robotics.com#Empresa4"/>
+        <Distribuido_Por rdf:resource="http://all-robotics.com#Empresa4"/>
+        <Ensamblado_Por rdf:resource="http://all-robotics.com#Empresa5"/>
+        <Identificacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1367</Identificacion>
+        <Nombre>Androide 17</Nombre>
+        <Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">580</Peso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://all-robotics.com#Robot2 -->
+
+    <owl:NamedIndividual rdf:about="http://all-robotics.com#Robot2">
+        <rdf:type rdf:resource="http://all-robotics.com#Bipedo"/>
+        <Identificacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">697</Identificacion>
+        <Nombre>Bioloid</Nombre>
+        <Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</Peso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://all-robotics.com#Robot3 -->
+
+    <owl:NamedIndividual rdf:about="http://all-robotics.com#Robot3">
+        <rdf:type rdf:resource="http://all-robotics.com#Hibrido"/>
+        <Distribuido_Por rdf:resource="http://all-robotics.com#Empresa2"/>
+        <Identificacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Identificacion>
+        <Nombre>HiperBot</Nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://all-robotics.com#Robot4 -->
+
+    <owl:NamedIndividual rdf:about="http://all-robotics.com#Robot4">
+        <rdf:type rdf:resource="http://all-robotics.com#Industrial"/>
+        <Distribuido_Por rdf:resource="http://all-robotics.com#Empresa2"/>
+        <Identificacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">559845</Identificacion>
+        <Nombre>Chuck</Nombre>
+        <Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3659</Peso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://all-robotics.com#Robot5 -->
+
+    <owl:NamedIndividual rdf:about="http://all-robotics.com#Robot5">
+        <rdf:type rdf:resource="http://all-robotics.com#Movil"/>
+        <Ensamblado_Por rdf:resource="http://all-robotics.com#Empresa3"/>
+        <Identificacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">365974</Identificacion>
+        <Nombre>Tesla</Nombre>
+        <Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">321</Peso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://all-robotics.com#Robot6 -->
+
+    <owl:NamedIndividual rdf:about="http://all-robotics.com#Robot6">
+        <rdf:type rdf:resource="http://all-robotics.com#Zoomorfico"/>
+        <Creado_Por rdf:resource="http://all-robotics.com#Empresa3"/>
+        <Ensamblado_Por rdf:resource="http://all-robotics.com#Empresa5"/>
+        <Nombre>FishBot</Nombre>
+        <Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Peso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://all-robotics.com#Robot7 -->
+
+    <owl:NamedIndividual rdf:about="http://all-robotics.com#Robot7">
+        <rdf:type rdf:resource="http://all-robotics.com#Androide"/>
+        <Creado_Por rdf:resource="http://all-robotics.com#Empresa1"/>
+        <Identificacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</Identificacion>
+        <Nombre>Androide 18</Nombre>
+        <Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125</Peso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://all-robotics.com#Robot8 -->
+
+    <owl:NamedIndividual rdf:about="http://all-robotics.com#Robot8">
+        <rdf:type rdf:resource="http://all-robotics.com#Bipedo"/>
+        <Creado_Por rdf:resource="http://all-robotics.com#Empresa5"/>
+        <Identificacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3685746</Identificacion>
+        <Nombre>BiBot</Nombre>
+        <Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</Peso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://all-robotics.com#Androide"/>
+            <rdf:Description rdf:about="http://all-robotics.com#Bipedo"/>
+            <rdf:Description rdf:about="http://all-robotics.com#Hibrido"/>
+            <rdf:Description rdf:about="http://all-robotics.com#Industrial"/>
+            <rdf:Description rdf:about="http://all-robotics.com#Movil"/>
+            <rdf:Description rdf:about="http://all-robotics.com#Rescate"/>
+            <rdf:Description rdf:about="http://all-robotics.com#Zoomorfico"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,16 @@
+PREFIX robots: <http://all-robotics.com#>
+PREFIX countries: <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries/>
+
+SELECT DISTINCT ?nombre ?namePais
+FROM <Robots>
+FROM NAMED <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries/>
+WHERE
+{
+  ?robot robots:Nombre ?nombre.
+  ?robot robots:Identificacion ?id.
+  ?robot robots:Peso ?peso.
+  GRAPH ?g {
+    ?pais countries:dependentTerritoryOf ?paisDominante.
+    ?pais countries:nameLocal ?namePais.
+  }
+}

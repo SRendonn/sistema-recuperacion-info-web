@@ -1,0 +1,9 @@
+PREFIX countries: <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries/>
+
+INSERT INTO GRAPH <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries/>
+{
+         countries:Capital rdf:type owl:Class.
+         countries:hasCapital rdf:type owl:ObjectProperty;
+                              rdfs:domain countries:Country;
+                              rdfs:range countries:Capital.
+}

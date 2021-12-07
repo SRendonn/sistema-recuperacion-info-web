@@ -1,0 +1,7 @@
+PREFIX c: <http://www.bpiresearch.com/BPMO/2004/03/03/cdl/Countries/>
+
+SELECT DISTINCT ?nombre 
+WHERE {
+ ?dependiente c:dependentTerritoryOf ?pais.
+ ?dependiente c:nameEnglish ?nombre. 
+}
