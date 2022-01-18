@@ -1,0 +1,644 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.family.org#"
+     xml:base="http://www.family.org"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:www="http://www.family.org/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.family.org"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.family.org/es_abuela_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_abuela_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Abuela"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_abuelo_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_abuelo_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Abuelo"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_hermana_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_hermana_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Hermana"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_hermano_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_hermano_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Hermano"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_hija_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_hija_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Hija"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_hijo_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_hijo_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Hijo"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_madre_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_madre_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Madre"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_nieta_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_nieta_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Nieta"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_nieto_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_nieto_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Nieto"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_padre_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_padre_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Padre"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_prima_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_prima_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Prima"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_primo_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_primo_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Primo"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_sobrina_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_sobrina_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Sobrina"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_sobrino_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_sobrino_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Sobrino"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_tia_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_tia_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Tia"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.family.org/es_tio_de -->
+
+    <owl:ObjectProperty rdf:about="http://www.family.org/es_tio_de">
+        <rdfs:domain rdf:resource="http://www.family.org/Tio"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.family.org/Hombre"/>
+                    <rdf:Description rdf:about="http://www.family.org/Mujer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.family.org/edad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.family.org/edad">
+        <rdfs:domain rdf:resource="http://www.family.org/Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.family.org/nombre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.family.org/nombre">
+        <rdfs:domain rdf:resource="http://www.family.org/Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.family.org/Abuela -->
+
+    <owl:Class rdf:about="http://www.family.org/Abuela">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Mujer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Abuelo -->
+
+    <owl:Class rdf:about="http://www.family.org/Abuelo">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Hombre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Hermana -->
+
+    <owl:Class rdf:about="http://www.family.org/Hermana">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Mujer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Hermano -->
+
+    <owl:Class rdf:about="http://www.family.org/Hermano">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Hombre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Hija -->
+
+    <owl:Class rdf:about="http://www.family.org/Hija">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Mujer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Hijo -->
+
+    <owl:Class rdf:about="http://www.family.org/Hijo">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Hombre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Hombre -->
+
+    <owl:Class rdf:about="http://www.family.org/Hombre">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Persona"/>
+        <owl:disjointWith rdf:resource="http://www.family.org/Mujer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Madre -->
+
+    <owl:Class rdf:about="http://www.family.org/Madre">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Mujer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Mujer -->
+
+    <owl:Class rdf:about="http://www.family.org/Mujer">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Nieta -->
+
+    <owl:Class rdf:about="http://www.family.org/Nieta">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Mujer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Nieto -->
+
+    <owl:Class rdf:about="http://www.family.org/Nieto">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Hombre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Padre -->
+
+    <owl:Class rdf:about="http://www.family.org/Padre">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Hombre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Persona -->
+
+    <owl:Class rdf:about="http://www.family.org/Persona"/>
+    
+
+
+    <!-- http://www.family.org/Prima -->
+
+    <owl:Class rdf:about="http://www.family.org/Prima">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Mujer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Primo -->
+
+    <owl:Class rdf:about="http://www.family.org/Primo">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Hombre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Sobrina -->
+
+    <owl:Class rdf:about="http://www.family.org/Sobrina">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Mujer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Sobrino -->
+
+    <owl:Class rdf:about="http://www.family.org/Sobrino">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Hombre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Tia -->
+
+    <owl:Class rdf:about="http://www.family.org/Tia">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Mujer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.family.org/Tio -->
+
+    <owl:Class rdf:about="http://www.family.org/Tio">
+        <rdfs:subClassOf rdf:resource="http://www.family.org/Hombre"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.family.org/AbrahamSimpson -->
+
+    <owl:NamedIndividual rdf:about="http://www.family.org/AbrahamSimpson">
+        <rdf:type rdf:resource="http://www.family.org/Hombre"/>
+        <www:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</www:edad>
+        <www:nombre>Abraham Simpson</www:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.family.org/BartSimpson -->
+
+    <owl:NamedIndividual rdf:about="http://www.family.org/BartSimpson">
+        <rdf:type rdf:resource="http://www.family.org/Hombre"/>
+        <www:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</www:edad>
+        <www:nombre>Bart Simpson</www:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.family.org/ClancyBouvier -->
+
+    <owl:NamedIndividual rdf:about="http://www.family.org/ClancyBouvier">
+        <rdf:type rdf:resource="http://www.family.org/Hombre"/>
+        <www:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</www:edad>
+        <www:nombre>Clancy Bouvier</www:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.family.org/HerbertPowell -->
+
+    <owl:NamedIndividual rdf:about="http://www.family.org/HerbertPowell">
+        <rdf:type rdf:resource="http://www.family.org/Hombre"/>
+        <www:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</www:edad>
+        <www:nombre>Herbert Powell</www:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.family.org/HomeroSimpson -->
+
+    <owl:NamedIndividual rdf:about="http://www.family.org/HomeroSimpson">
+        <rdf:type rdf:resource="http://www.family.org/Hombre"/>
+        <www:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</www:edad>
+        <www:nombre>Homero Simpson</www:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.family.org/JacquelineBouvier -->
+
+    <owl:NamedIndividual rdf:about="http://www.family.org/JacquelineBouvier">
+        <rdf:type rdf:resource="http://www.family.org/Mujer"/>
+        <www:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67</www:edad>
+        <www:nombre>Jacqueline Bouvier</www:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.family.org/LingBouvier -->
+
+    <owl:NamedIndividual rdf:about="http://www.family.org/LingBouvier">
+        <rdf:type rdf:resource="http://www.family.org/Mujer"/>
+        <www:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</www:edad>
+        <www:nombre>Ling Bouvier</www:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.family.org/LisaSimpson -->
+
+    <owl:NamedIndividual rdf:about="http://www.family.org/LisaSimpson">
+        <rdf:type rdf:resource="http://www.family.org/Mujer"/>
+        <www:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</www:edad>
+        <www:nombre>Lisa Simpson</www:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.family.org/MaggieSimpson -->
+
+    <owl:NamedIndividual rdf:about="http://www.family.org/MaggieSimpson">
+        <rdf:type rdf:resource="http://www.family.org/Mujer"/>
+        <www:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</www:edad>
+        <www:nombre>Maggie Simpson</www:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.family.org/MargeSimpson -->
+
+    <owl:NamedIndividual rdf:about="http://www.family.org/MargeSimpson">
+        <rdf:type rdf:resource="http://www.family.org/Mujer"/>
+        <www:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</www:edad>
+        <www:nombre>Marge Simpson</www:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.family.org/MonaSimpson -->
+
+    <owl:NamedIndividual rdf:about="http://www.family.org/MonaSimpson">
+        <rdf:type rdf:resource="http://www.family.org/Mujer"/>
+        <www:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</www:edad>
+        <www:nombre>Mona Simpson</www:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.family.org/PattyBouvier -->
+
+    <owl:NamedIndividual rdf:about="http://www.family.org/PattyBouvier">
+        <rdf:type rdf:resource="http://www.family.org/Mujer"/>
+        <www:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</www:edad>
+        <www:nombre>Patty Bouvier</www:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.family.org/SelmaBouvier -->
+
+    <owl:NamedIndividual rdf:about="http://www.family.org/SelmaBouvier">
+        <rdf:type rdf:resource="http://www.family.org/Mujer"/>
+        <www:edad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</www:edad>
+        <www:nombre>Selma Bouvier</www:nombre>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.family.org/AbrahamSimpson"/>
+            <rdf:Description rdf:about="http://www.family.org/BartSimpson"/>
+            <rdf:Description rdf:about="http://www.family.org/ClancyBouvier"/>
+            <rdf:Description rdf:about="http://www.family.org/HerbertPowell"/>
+            <rdf:Description rdf:about="http://www.family.org/HomeroSimpson"/>
+            <rdf:Description rdf:about="http://www.family.org/JacquelineBouvier"/>
+            <rdf:Description rdf:about="http://www.family.org/LingBouvier"/>
+            <rdf:Description rdf:about="http://www.family.org/LisaSimpson"/>
+            <rdf:Description rdf:about="http://www.family.org/MaggieSimpson"/>
+            <rdf:Description rdf:about="http://www.family.org/MargeSimpson"/>
+            <rdf:Description rdf:about="http://www.family.org/MonaSimpson"/>
+            <rdf:Description rdf:about="http://www.family.org/PattyBouvier"/>
+            <rdf:Description rdf:about="http://www.family.org/SelmaBouvier"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
